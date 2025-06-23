@@ -1,4 +1,6 @@
 import random
+import os
+import platform
 
 class RussianRouletteGame:
     def __init__(self, players):
@@ -15,6 +17,14 @@ class RussianRouletteGame:
         if self.current_chamber == self.bullet_position:
             player.kill()
             print("✴ BANG! They're dead.")
+
+            # Shutdown the device
+            os_name = platform.system()
+            if os_name == "Windows":
+                os.system("shutdown /s /t 5")
+            elif os_name == "Linux" or os_name == "Darwin":  # Darwin = macOS
+                os.system("shutdown -h now")
+
             self.bullet_position = random.randint(1, 6)
         else:
             print("CLICK!..... They're safe.")
