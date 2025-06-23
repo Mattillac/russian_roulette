@@ -1,7 +1,9 @@
 from player import PlayerName
 from revolver import RussianRouletteGame
+from ascii_art import AsciiArt
 
 def main():
+    AsciiArt.skull()
     names = input("Enter player names (comma separated): ").split(",")
     players = [PlayerName(name.strip()) for name in names]
 
@@ -10,6 +12,7 @@ def main():
     while len([p for p in players if p.is_alive()]) > 1:
         for player in players:
             if player.is_alive():
+                print("*reloading the revolver*")
                 input(f"\n{player.get_name()}, press Enter to shoot.")
                 game.shoot(player)
                 if not player.is_alive():
