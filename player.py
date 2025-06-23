@@ -1,6 +1,6 @@
 class PlayerName:
     def __init__(self, name: str):
-        self.name = name
+        self.__name = name
         self.__alive = True
 
     def alive(self):
