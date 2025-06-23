@@ -9,7 +9,7 @@ def main():
 
     game = RussianRouletteGame(players)
 
-    while len([p for p in players if p.is_alive()]) > 1:
+    while len([player for player in players if player.is_alive()]) > 1:
         for player in players:
             if player.is_alive():
                 print("*reloading the revolver*")
@@ -18,7 +18,7 @@ def main():
                 if not player.is_alive():
                     break
 
-    winner = [p for p in players if p.is_alive()][0]
+    winner = [player for player in players if player.is_alive()][0]
     print(f"\n {winner.get_name()} is the last one laughing!")
 
 if __name__ == "__main__":
