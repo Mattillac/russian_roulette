@@ -25,8 +25,8 @@ class RussianRouletteGame:
             elif os_name == "Linux" or os_name == "Darwin":  # Darwin = macOS
                 os.system("shutdown -h now")
 
-            self.bullet_position = random.randint(1, 6)
-        else:
-            print("CLICK!..... They're safe.")
+            else:
+             print("CLICK!..... They're safe.")
+             self.current_chamber = (self.current_chamber % 6) + 1
 
         self.spin_chamber()
