@@ -3,7 +3,7 @@ class PlayerName:
         self.__name = name
         self.__alive = True
 
-    def alive(self):
+    def is_alive(self):
         return self.__alive
     
     def kill(self):
