@@ -12,7 +12,7 @@ def main():
         if role == "human":
             players.append(HumanPlayer(pname))
         elif role == "ai":
-            players.append(AIPlayer(pname))
+            players.append(AIEnemy(pname))
 
     game = RussianRouletteGame(players)
 
