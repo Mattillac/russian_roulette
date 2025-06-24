@@ -1,11 +1,18 @@
-from player import PlayerName
+from player import HumanPlayer, AIEnemy
 from revolver import RussianRouletteGame
 from ascii_art import AsciiArt
 
 def main():
     AsciiArt.skull()
-    names = input("Enter player names (comma separated): ").split(",")
-    players = [PlayerName(name.strip()) for name in names]
+    names = input("Enter players (human/s:John, ai:Bot): ").split(",")
+
+    players = []
+    for name in names:
+        role, pname = name.strip().split(":")
+        if role == "human":
+            players.append(HumanPlayer(pname))
+        elif role == "ai":
+            players.append(AIPlayer(pname))
 
     game = RussianRouletteGame(players)
 
@@ -13,8 +20,7 @@ def main():
         for player in players:
             if player.is_alive():
                 print("*reloading the revolver*")
-                input(f"\n{player.get_name()}, press Enter to shoot.")
-                game.shoot(player)
+                player.take_turn(game)
                 if not player.is_alive():
                     break
 
