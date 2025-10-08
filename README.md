@@ -9,7 +9,7 @@
                               ███    ███ ████████▀   ▄████████▀   ▄████████▀  █▀     ███    █▀   ▀█   █▀         ███    ███  ▀██████▀  ████████▀  █████▄▄██   ██████████    ▄████▀      ▄████▀     ██████████ 
                               ███    ███                                                                         ███    ███                       ▀                                                           
                                                                                                                                                                            
-By nitanmarcel
+#By nitanmarcel
 Shout out to “nitanmarcel” for his Russian Roulette Program, thanks to nitanmarcel, this project was created! This helped me create an OOP version of his work and managed to do a little spin of mine!
 
 Here is the link of his account!
